@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+/* :root {
   --background: #ffffff;
   --foreground: #171717;
 }
@@ -12,16 +12,31 @@
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
+} */
 
-body {
-  color: var(--foreground);
-  background: var(--background);
+/* body {
   font-family: Arial, Helvetica, sans-serif;
-}
+} */
 
-@layer utilities {
+/* @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+} */
+
+@layer base {
+  body {
+    @apply dark:bg-black bg-gray-50;
+  }
+
+  input, 
+  textarea, 
+  select {
+    @apply bg-white text-gray-900 dark:text-gray-100;
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    @apply text-gray-500 dark:text-white;
   }
 }
